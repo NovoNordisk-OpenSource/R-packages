@@ -1,0 +1,6 @@
+packages:
+  - novonordisk-opensource/whirl
+  - hta-pharma/ramnog
+  - hta-pharma/chef
+  - hta-pharma/chefstats
+  - hta-pharma/chefcriteria

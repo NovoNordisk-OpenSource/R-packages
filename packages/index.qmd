@@ -1,0 +1,15 @@
+---
+title: "Packages"
+editor_options: 
+  chunk_output_type: console
+---
+
+assdas
+
+```{r}
+packages <- read_packages()
+```
+
+```{r}
+knitr::kable(packages)
+```
