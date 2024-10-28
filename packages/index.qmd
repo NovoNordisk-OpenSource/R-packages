@@ -1,15 +1,17 @@
 ---
 title: "Packages"
-editor_options: 
-  chunk_output_type: console
+page-layout: full
+title-block-banner: false
+listing:
+  contents: .
+  id: package-listing
+  sort: "date asc"
+  type: grid
+  image-height: 100%
+  grid-columns: 4
+  sort-ui: false
+  filter-ui: false
 ---
 
-assdas
-
-```{r}
-packages <- read_packages()
-```
-
-```{r}
-knitr::kable(packages)
-```
+::: {#package-listing}
+:::

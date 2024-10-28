@@ -1,6 +1,11 @@
 
 # Create package pages
 
+here::here("packages") |> 
+  list.dirs() |> 
+  setdiff(here::here("packages")) |> 
+  unlink(recursive = TRUE)
+
 packages <- here::here("_packages.yml") |> 
   yaml::read_yaml() |> 
   purrr::pluck("packages") |>
@@ -21,3 +26,4 @@ for (pkg in packages) {
 
 # Create webpage
 
+quarto::quarto_render()
