@@ -9,8 +9,8 @@ listing:
   type: grid
   image-height: 100%
   grid-columns: 4
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
 ---
 
 ::: {#package-listing}
