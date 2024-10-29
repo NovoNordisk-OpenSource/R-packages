@@ -1,10 +1,34 @@
 ---
-title: {{name}}
+title: "{{name}}"
 image: "{{logo}}"
+categories: [{{categories}}]
 ---
+
+::: {.grid}
+
+::: {.g-col-6}
 
 ![]({{logo}})
 
-{{title}}
+:::
 
-{{desription}}
+::: {.g-col-6}
+
+## {{title}}
+
+{{description}}
+
+[![](https://img.shields.io/badge/pkgdown-documentation-blue)]({{homepage}})
+
+[![](https://www.r-pkg.org/badges/version/{{name}})](https://cran.r-project.org/package={{name}})
+[![](http://cranlogs.r-pkg.org/badges/last-month/{{name}})](https://cranlogs.r-pkg.org/downloads/total/last-month/{{name}})
+
+[![](https://img.shields.io/badge/devel%20version-{{version}}-green.svg)]({{html_url}})
+[![](https://img.shields.io/github/check-runs/{{full_name}}/{{default_branch}})]({{html_url}}/actions)
+[![](https://img.shields.io/github/issues/{{full_name}})]({{html_url}}/issues)
+
+![](https://img.shields.io/github/license/{{full_name}})
+
+:::
+
+:::

@@ -11,13 +11,9 @@ website:
       - packages/index.qmd
       - ressources.qmd
       - news/index.qmd
-      - about.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-

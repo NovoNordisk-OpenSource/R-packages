@@ -1,3 +1,8 @@
+# Load utility R functions
+
+list.files(path = "R", full.names = TRUE) |>
+  purrr::walk(source)
+
 # Create package pages
 
 here::here("packages") |>
@@ -23,7 +28,3 @@ for (pkg in packages) {
     whisker::whisker.render(pkg) |>
     writeLines(out)
 }
-
-# Create webpage
-
-quarto::quarto_render()

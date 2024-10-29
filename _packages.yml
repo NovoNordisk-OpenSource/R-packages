@@ -1,6 +1,23 @@
 packages:
-  - novonordisk-opensource/whirl
-  - hta-pharma/ramnog
-  - hta-pharma/chef
-  - hta-pharma/chefstats
-  - hta-pharma/chefcriteria
+  - name: novonordisk-opensource/whirl
+    categories:
+      - trial conduct
+  - name: hta-pharma/ramnog
+    categories:
+      - hta
+      - amnog
+  - name: hta-pharma/chef
+    categories:
+      - hta
+      - amnog
+  - name: hta-pharma/chefstats
+    categories:
+      - hta
+      - amnog
+  - name: hta-pharma/chefcriteria
+    categories:
+      - hta
+      - amnog
+  - name: novonordisk-opensource/zephyr
+    categories:
+      - utility

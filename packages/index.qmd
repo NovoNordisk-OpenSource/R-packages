@@ -3,15 +3,16 @@ title: "Packages"
 page-layout: full
 title-block-banner: false
 listing:
-  contents: .
-  id: package-listing
-  sort: "date asc"
+  contents: /*/index.qmd
+  id: packages
+  sort: "name"
   type: grid
   image-height: 100%
-  grid-columns: 4
-  sort-ui: true
+  grid-columns: 3
+  sort-ui: false
   filter-ui: true
+  categories: true
 ---
 
-::: {#package-listing}
+::: {#packages}
 :::
