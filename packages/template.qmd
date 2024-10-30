@@ -8,7 +8,7 @@ categories: [{{pkg$categories}}]
 
 ::: {.g-col-6}
 
-![]({{logo}})
+[![]({{logo}})]({{repo$homepage}})
 
 :::
 
