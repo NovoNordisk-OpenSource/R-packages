@@ -12,6 +12,12 @@ get_package <- function(pkg) {
     base64enc::base64decode() |>
     rawToChar() |>
     writeLines(desc_file)
+  
+  desc_fields <- desc_file |> 
+    desc::desc_fields() |> 
+    rlang::set_names() |> 
+    purrr::map(desc::desc_get_field, file = desc_file)
+  
 
   logo <- tryCatch(
     gh::gh("GET /repos/{pkg}/contents/man/figures", pkg = pkg$name) |>
@@ -21,15 +27,11 @@ get_package <- function(pkg) {
     
     error = \(e) return(NULL) 
   )
-
-  c(
-    purrr::keep(.x = repo, .p = \(x) length(x) == 1),
-    
-    pkg[!names(pkg) == "name"],
-    
-    title = desc::desc_get_field("Title", file = desc_file),
-    version = desc::desc_get_version(desc_file) |>
-      paste(collapse = "."),
+  
+  list(
+    pkg = pkg,
+    repo = purrr::keep(.x = repo, .p = \(x) length(x) == 1),
+    desc = desc_fields,
     logo = logo
   )
 }

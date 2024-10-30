@@ -1,7 +1,7 @@
 ---
-title: "{{name}}"
+title: "{{repo$name}}"
 image: "{{logo}}"
-categories: [{{categories}}]
+categories: [{{pkg$categories}}]
 ---
 
 ::: {.grid}
@@ -14,20 +14,20 @@ categories: [{{categories}}]
 
 ::: {.g-col-6}
 
-## {{title}}
+## {{desc$Title}}
 
-{{description}}
+{{desc$Description}}
 
-[![](https://img.shields.io/badge/pkgdown-documentation-blue)]({{homepage}})
+[![](https://img.shields.io/badge/pkgdown-documentation-blue)]({{repo$homepage}})
 
-[![](https://www.r-pkg.org/badges/version/{{name}})](https://cran.r-project.org/package={{name}})
-[![](http://cranlogs.r-pkg.org/badges/last-month/{{name}})](https://cranlogs.r-pkg.org/downloads/total/last-month/{{name}})
+[![](https://www.r-pkg.org/badges/version/{{repo$name}})](https://cran.r-project.org/package={{repo$name}})
+[![](http://cranlogs.r-pkg.org/badges/last-month/{{repo$name}})](https://cranlogs.r-pkg.org/downloads/total/last-month/{{repo$name}})
 
-[![](https://img.shields.io/badge/devel%20version-{{version}}-green.svg)]({{html_url}})
-[![](https://img.shields.io/github/check-runs/{{full_name}}/{{default_branch}})]({{html_url}}/actions)
-[![](https://img.shields.io/github/issues/{{full_name}})]({{html_url}}/issues)
+[![](https://img.shields.io/badge/devel%20version-{{desc$Version}}-green.svg)]({{repo$html_url}})
+[![](https://img.shields.io/github/check-runs/{{repo$full_name}}/{{repo$default_branch}})]({{repo$html_url}}/actions)
+[![](https://img.shields.io/github/issues/{{repo$full_name}})]({{repo$html_url}}/issues)
 
-![](https://img.shields.io/github/license/{{full_name}})
+![](https://img.shields.io/github/license/{{repo$full_name}})
 
 :::
 

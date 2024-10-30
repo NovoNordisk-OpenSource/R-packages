@@ -16,15 +16,17 @@ packages <- here::here("_packages.yml") |>
   lapply(get_package) |>
   lapply(\(x) purrr::discard(.x = x, .p = is.null))
 
+pkg_template <- here::here("packages/template.qmd") |>
+  readLines() 
+
 for (pkg in packages) {
   out <- pkg |>
-    with(glue::glue("packages/{name}/index.qmd")) |>
+    with(glue::glue("packages/{repo$name}/index.qmd")) |>
     here::here()
 
   dir.create(dirname(out))
 
-  here::here("packages/template.qmd") |>
-    readLines() |>
-    whisker::whisker.render(pkg) |>
+  pkg_template |>
+    whisker::whisker.render(data = pkg, strict = FALSE) |>
     writeLines(out)
 }
