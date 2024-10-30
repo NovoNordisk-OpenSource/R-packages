@@ -2,14 +2,14 @@ project:
   type: website
   render: 
     - "*.qmd"
-    - "!packages/template.qmd"
+    - "!*/template.qmd"
 
 website:
   title: "R packages developed by Novo Nordisk"
   navbar:
     left:
       - packages/index.qmd
-      - ressources.qmd
+      - ressources/index.qmd
       - news/index.qmd
 
 format:

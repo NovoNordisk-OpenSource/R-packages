@@ -1,0 +1,21 @@
+presentations:
+
+  - date: 10oct2024
+    presentation:
+      name: "{whirl} – An Open-Source R Package for Program Logs"
+      link: https://phuse.s3.eu-central-1.amazonaws.com/Archive/2024/SDE/EU/Copenhagen/PRE_Copenhagen03.pdf
+    event: 
+      name: PHUSE SDE Copenhagen
+      link: https://www.phuse-events.org/attend/frontend/reg/thome.csp?pageID=33176&eventID=52&traceRedir=2
+    presenters: 
+      - name: Aksel Thomsen
+        link: https://github.com/akselthomsen
+        
+  - date: 30oct2024
+    presentation:
+      name: "{whirl} – An Open-Source R Package for Program Logs"
+    event: 
+      name: R/Pharma 2024
+    presenters: 
+      - name: Lovemore Gakava
+      - name: Cervan Girard

@@ -1,7 +1,0 @@
----
-title: "Ressources"
----
-
-## Presentations
-
-* https://www.phuse-events.org/attend/frontend/reg/thome.csp?pageID=33176&eventID=52&traceRedir=2

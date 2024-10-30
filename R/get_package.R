@@ -12,22 +12,21 @@ get_package <- function(pkg) {
     base64enc::base64decode() |>
     rawToChar() |>
     writeLines(desc_file)
-  
-  desc_fields <- desc_file |> 
-    desc::desc_fields() |> 
-    rlang::set_names() |> 
+
+  desc_fields <- desc_file |>
+    desc::desc_fields() |>
+    rlang::set_names() |>
     purrr::map(desc::desc_get_field, file = desc_file)
-  
+
 
   logo <- tryCatch(
     gh::gh("GET /repos/{pkg}/contents/man/figures", pkg = pkg$name) |>
       purrr::map_chr("download_url") |>
       stringr::str_subset("logo\\.(svg|png)$") |>
       tail(1),
-    
-    error = \(e) return(NULL) 
+    error = \(e) return(NULL)
   )
-  
+
   list(
     pkg = pkg,
     repo = purrr::keep(.x = repo, .p = \(x) length(x) == 1),

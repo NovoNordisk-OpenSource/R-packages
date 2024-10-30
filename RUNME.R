@@ -1,9 +1,9 @@
-# Load utility R functions
+# Load utility R functions ----
 
 list.files(path = "R", full.names = TRUE) |>
   purrr::walk(source)
 
-# Create package pages
+# Create package pages ----
 
 here::here("packages") |>
   list.dirs() |>
@@ -17,7 +17,7 @@ packages <- here::here("_packages.yml") |>
   lapply(\(x) purrr::discard(.x = x, .p = is.null))
 
 pkg_template <- here::here("packages/template.qmd") |>
-  readLines() 
+  readLines()
 
 for (pkg in packages) {
   out <- pkg |>

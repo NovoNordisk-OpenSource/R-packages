@@ -1,0 +1,66 @@
+---
+title: "Ressources"
+---
+
+```{r}
+#| label: read-ressources
+#| include: false
+
+create_links <- function(x) {
+  stopifnot("name" %in% names(x))
+  if (!"link" %in% names(x)) {
+    return(x$name)
+  }
+  paste0("[", x$name, "](", x$link, ")")
+}
+
+collapse_list <- function(x) {
+  stopifnot(is.character(x))
+  if (length(x) == 1) {
+    return(x)
+  }
+  a <- head(x, -1) |> paste(collapse = ", ")
+  return(paste0(a, " and ", tail(x, 1)))
+}
+
+ressources <- here::here("_ressources.yml") |>
+  yaml::read_yaml() |>
+  tibble::enframe(name = "type") |>
+  tidyr::unnest_longer(col = value) |>
+  tidyr::unnest_wider(col = value) |>
+  dplyr::mutate(
+    date = lubridate::dmy(date),
+    presenters = purrr::map_depth(presenters, 2, create_links) |>
+      purrr::map(unlist) |>
+      purrr::map_chr(collapse_list),
+    dplyr::across(
+      .cols = c(presentation, event),
+      .fns = \(x) purrr::map_chr(.x = x, .f = create_links)
+    )
+  ) |>
+  dplyr::arrange(dplyr::desc(date), presentation)
+
+ressources <- split(ressources, ressources$type) |>
+  purrr::map(.f = \(x) split(x, lubridate::year(x$date)))
+```
+
+```{r}
+#| label: list-ressources
+#| echo: false
+#| results: asis
+
+for (i in seq_along(ressources)) {
+  cat("## ", stringr::str_to_title(names(ressources)[[i]]), "\n")
+
+  for (j in seq_along(ressources[[i]])) {
+    cat("### ", stringr::str_to_title(names(ressources[[i]])[[j]]), "\n")
+
+    glue::glue_data(
+      .x = ressources[[i]][[j]],
+      "* **{date}** {presentation}, {event}, by {presenters}"
+    ) |>
+      cat(sep = "\n")
+  }
+}
+```
+
