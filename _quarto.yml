@@ -6,6 +6,7 @@ project:
 
 website:
   title: "R packages developed by Novo Nordisk"
+  favicon: favicon.ico
   repo-url: https://github.com/NovoNordisk-OpenSource/r-packages
   repo-actions: [source, edit]
   search:
