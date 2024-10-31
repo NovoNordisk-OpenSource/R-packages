@@ -24,8 +24,6 @@ website:
 
 format:
   html:
-    theme: 
-      light: cosmo
-      dark: solar
+    theme: cosmo
     css: styles.css
     toc: true
