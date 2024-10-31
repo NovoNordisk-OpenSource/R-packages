@@ -1,0 +1,9 @@
+---
+title: Launch of homepage
+date: 2024-10-31
+author: Aksel Thomsen
+---
+
+![](logo_nn.png)
+
+this is a news test
