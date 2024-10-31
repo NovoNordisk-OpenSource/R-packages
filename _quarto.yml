@@ -6,14 +6,24 @@ project:
 
 website:
   title: "R packages developed by Novo Nordisk"
+  repo-url: https://github.com/NovoNordisk-OpenSource/r-packages
+  repo-actions: [source, edit]
+  search:
+    location: navbar
+    type: textbox
   navbar:
     left:
       - packages/index.qmd
       - ressources/index.qmd
       - news/index.qmd
+    right: 
+      - icon: github
+        href: https://github.com/NovoNordisk-OpenSource
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: solar
     css: styles.css
     toc: true
