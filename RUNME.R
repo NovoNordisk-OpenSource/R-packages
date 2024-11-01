@@ -30,3 +30,9 @@ for (pkg in packages) {
     whisker::whisker.render(data = pkg, strict = FALSE) |>
     writeLines(out)
 }
+
+# Create hex sticker wall on the front page
+
+packages |> 
+  hexgrid() |> 
+  writeLines("www/hex.html")

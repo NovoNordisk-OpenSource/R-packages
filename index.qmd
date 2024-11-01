@@ -2,4 +2,22 @@
 title: "R packages developed by Novo Nordisk"
 ---
 
-test of new CI
+::: {.grid}
+
+::: {.g-col-6}
+
+```{r}
+#| echo: false
+htmltools::includeCSS("www/hex.css")
+htmltools::includeHTML("www/hex.html")
+```
+
+:::
+
+::: {.g-col-6}
+
+Awesome description of what we have!
+
+:::
+
+:::
