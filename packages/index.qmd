@@ -1,0 +1,18 @@
+---
+title: "Packages"
+page-layout: full
+title-block-banner: false
+listing:
+  contents: /*/index.qmd
+  id: packages
+  sort: "name"
+  type: grid
+  image-height: 100%
+  grid-columns: 3
+  sort-ui: false
+  filter-ui: true
+  categories: true
+---
+
+::: {#packages}
+:::

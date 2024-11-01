@@ -2,6 +2,8 @@ on:
   workflow_dispatch:
   push:
     branches: main
+  pull_request:
+    branches: main
 
 name: Quarto Build and Publish
 
@@ -24,6 +26,9 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+          
+      - name: Generate pages
+        run: Rscript RUNME.R
           
       - name: Quarto Render
         uses: quarto-dev/quarto-actions/render@v2

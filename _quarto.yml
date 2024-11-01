@@ -1,0 +1,29 @@
+project:
+  type: website
+  render: 
+    - "*.qmd"
+    - "!*/template.qmd"
+
+website:
+  title: Home
+  favicon: www/favicon.ico
+  repo-url: https://github.com/NovoNordisk-OpenSource/r-packages
+  repo-actions: [source, edit]
+  search:
+    location: navbar
+    type: textbox
+  navbar:
+    logo: www/logo_nn.png
+    left:
+      - packages/index.qmd
+      - ressources/index.qmd
+      - news/index.qmd
+    right: 
+      - icon: github
+        href: https://github.com/NovoNordisk-OpenSource
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
