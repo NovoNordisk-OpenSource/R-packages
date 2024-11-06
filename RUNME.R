@@ -31,7 +31,7 @@ for (pkg in packages) {
     writeLines(out)
 }
 
-# Create hex sticker wall on the front page
+# Create hex sticker wall on the front page ----
 
 packages |> 
   hexgrid() |> 
