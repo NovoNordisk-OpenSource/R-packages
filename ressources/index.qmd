@@ -2,6 +2,8 @@
 title: "Ressources"
 ---
 
+Below you will find a list of additional resources to learn more about our R packages.
+
 ```{r}
 #| label: read-ressources
 #| include: false

@@ -2,6 +2,11 @@
 title: "R packages developed by Novo Nordisk"
 ---
 
+Welcome to the overview of Open Source R packages developed by Novo Nordisk.
+
+Our goal is to provide tools to analyse data from clinical trials, 
+and facilitate the entire trial conduct process, from data collection to reporting of clinical results.
+
 ::: {.grid}
 
 ::: {.g-col-6}
@@ -16,8 +21,13 @@ htmltools::includeHTML("www/hex.html")
 
 ::: {.g-col-6}
 
-Awesome description of what we have!
+Our current main packages are:
+
+* [{whirl}](https://novonordisk-opensource.github.io/whirl/): Execute scripts and generate logs suitable for clinical trials
+* [{RAMNOG}](https://hta-pharma.github.io/ramnog/): Collection of packages facilitating AMNOG style analysis pipelines
 
 :::
 
 :::
+
+To learn more press on a package logo above, visit the [Packages](packages/index.qmd) overviews, or check out any of our [Presentations](ressources/index.qmd#Presentations).
