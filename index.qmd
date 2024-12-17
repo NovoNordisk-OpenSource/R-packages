@@ -25,6 +25,7 @@ Our current main packages are:
 
 * [{whirl}](https://novonordisk-opensource.github.io/whirl/): Execute scripts and generate logs suitable for clinical trials
 * [{RAMNOG}](https://hta-pharma.github.io/ramnog/): Collection of packages facilitating AMNOG style analysis pipelines
+* [{connector}](https://novonordisk-opensource.github.io/connector/): Seamless and consistent interface for connecting to different data sources
 
 :::
 

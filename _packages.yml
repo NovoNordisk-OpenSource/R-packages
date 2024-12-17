@@ -21,3 +21,6 @@ packages:
   - name: novonordisk-opensource/zephyr
     categories:
       - utility
+  - name: novonordisk-opensource/connector
+    categories:
+      - trial conduct
