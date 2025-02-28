@@ -2,6 +2,7 @@
 title: "{{repo$name}}"
 image: "{{logo}}"
 categories: [{{pkg$categories}}]
+default-image-extension: ""
 ---
 
 ::: {.grid}
