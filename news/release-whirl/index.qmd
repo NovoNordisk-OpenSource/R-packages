@@ -1,0 +1,119 @@
+---
+title: First release on CRAN {whirl} 
+date: 2025-04-25
+author: Aksel Thomsen
+---
+
+# Introduction to the whirl Package: R Script Execution with Automated Logging
+
+![](logo.png){width=300}
+
+
+## An Essential Tool for Validation and Reproducibility
+
+In the world of data analysis, particularly in the pharmaceutical sector, reproducibility and traceability are essential elements. The [whirl](https://novonordisk-opensource.github.io/whirl/) package developed by Novo Nordisk addresses this need by offering an elegant solution for executing R scripts with automatic log generation.
+
+## What is whirl?
+
+whirl is an R package that provides functionalities for executing scripts in batch while simultaneously generating detailed logs for each execution. A script execution log is a common GxP requirement in many pharmaceutical companies, and the whirl package honors this requirement by generating a log that contains, among other things, information about:
+
+- Status (whether the script ran with any error or warnings)
+- The actual code itself
+- Date and time of execution
+- The environment the script was executed under (session info)
+- Information about package versions that were utilized
+- Environmental variables
+
+All this is wrapped into a nicely formatted HTML document that is easy to navigate.
+
+## Why use whirl?
+
+The advantages of whirl are multiple:
+
+1. **GxP Compliance**: The generated logs contain the necessary information to meet traceability requirements.
+2. **Automation**: Batch execution of multiple scripts simplifies analysis workflows.
+3. **Comprehensive Documentation**: Each execution is documented with all relevant details.
+4. **Ease of Use**: A simple and intuitive API that integrates into your R workflow.
+5. **Multi-format Support**: Compatibility with R, R Markdown, and Quarto scripts.
+
+## Installation
+
+Installing whirl is simple using CRAN:
+
+```r
+install.packages("whirl")
+```
+
+You can also install the latest development version from GitHub:
+
+```r
+# install.packages("remotes")
+remotes::install_github("novonordisk-opensource/whirl")
+```
+
+## Basic Usage
+
+Using whirl is remarkably simple. Here's a basic example:
+
+```r
+library(whirl)
+
+# Execute a single script
+run(input = "path/to/script.R")
+
+# Or execute multiple scripts using a wildcard
+run(input = "analyses/*.R")
+```
+
+The generated logs are automatically stored in the same directory as the script, making them easy to manage and track.
+
+## Configuration Options
+
+whirl offers several options to customize execution and log formats:
+
+```r
+# Example usage
+run(
+  input = "_whirl.yml",
+  steps = NULL,
+  summary_file = "summary.html",
+  n_workers = zephyr::get_option("n_workers", "whirl"),
+  check_renv = zephyr::get_option("check_renv", "whirl")
+)
+```
+
+The most important options include:
+
+- `verbosity_level`: Level of detail in logs (can be set via the `whirl.verbosity_level` option or the `R_WHIRL_VERBOSITY_LEVEL` environment variable)
+- `out_formats`: Log output formats, default is `"html"` (other available formats: `json`, `gfm`, `commonmark`, `markua`)
+- `track_files`: To track files that are read and written
+
+## Advanced Features
+
+### Parallel Execution
+
+whirl can execute multiple scripts in parallel to optimize performance using the `n_workers` parameter.
+
+### Custom Logging
+
+For operations not automatically captured (such as database interactions), whirl provides the `log_read()`, `log_write()` and `log_delete()` functions.
+
+## Integration into Broader Workflows
+
+whirl can easily integrate into your existing R development environments:
+
+1. **Projects using renv**: Capturing package versions facilitates reproducibility.
+2. **Continuous integration pipelines**: To automatically document executions.
+3. **Analysis workflows**: To standardize documentation of results.
+
+## Conclusion
+
+whirl is a valuable tool for R developers, particularly in environments where traceability and documentation of analyses are essential. By automating the generation of detailed logs, it improves reproducibility while simplifying the script execution process.
+
+For an R developer concerned with best practices, whirl represents a useful addition to the R ecosystem, allowing for improved rigor and documentation of data analyses.
+
+Feel free to explore the [complete documentation](https://novonordisk-opensource.github.io/whirl/) to discover all the possibilities offered by this package.
+
+---
+
+*This blog post was written on April 25, 2025. The whirl package is currently at version 0.2.0.*
