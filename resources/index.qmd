@@ -1,11 +1,11 @@
 ---
-title: "Ressources"
+title: "Resources"
 ---
 
 Below you will find a list of additional resources to learn more about our R packages.
 
 ```{r}
-#| label: read-ressources
+#| label: read-resources
 #| include: false
 
 create_links <- function(x) {
@@ -25,7 +25,7 @@ collapse_list <- function(x) {
   return(paste0(a, " and ", tail(x, 1)))
 }
 
-ressources <- here::here("_ressources.yml") |>
+resources <- here::here("_resources.yml") |>
   yaml::read_yaml() |>
   tibble::enframe(name = "type") |>
   tidyr::unnest_longer(col = value) |>
@@ -42,23 +42,23 @@ ressources <- here::here("_ressources.yml") |>
   ) |>
   dplyr::arrange(dplyr::desc(date), presentation)
 
-ressources <- split(ressources, ressources$type) |>
+resources <- split(resources, resources$type) |>
   purrr::map(.f = \(x) split(x, lubridate::year(x$date)))
 ```
 
 ```{r}
-#| label: list-ressources
+#| label: list-resources
 #| echo: false
 #| results: asis
 
-for (i in seq_along(ressources)) {
-  cat("## ", stringr::str_to_title(names(ressources)[[i]]), "\n")
+for (i in seq_along(resources)) {
+  cat("## ", stringr::str_to_title(names(resources)[[i]]), "\n")
 
-  for (j in seq_along(ressources[[i]])) {
-    cat("### ", stringr::str_to_title(names(ressources[[i]])[[j]]), "\n")
+  for (j in seq_along(resources[[i]])) {
+    cat("### ", stringr::str_to_title(names(resources[[i]])[[j]]), "\n")
 
     glue::glue_data(
-      .x = ressources[[i]][[j]],
+      .x = resources[[i]][[j]],
       "* **{date}** {presentation}, {event}, by {presenters}"
     ) |>
       cat(sep = "\n")

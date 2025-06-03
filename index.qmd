@@ -31,4 +31,4 @@ Our current main packages are:
 
 :::
 
-To learn more press on a package logo above, visit the [Packages](packages/index.qmd) overviews, or check out any of our [Presentations](ressources/index.qmd#Presentations).
+To learn more press on a package logo above, visit the [Packages](packages/index.qmd) overviews, or check out any of our [Presentations](resources/index.qmd#Presentations).

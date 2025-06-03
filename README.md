@@ -25,9 +25,9 @@ Packages are defined in `packages.yaml`. Each package has the following entry:
 The categories are used to allow easy filtering on the package overview subpage,
 so make sure to re-use categories when applicable.
 
-### Ressources
+### Resources
 
-Linked presentations etc. are defined in `ressources.yaml`. Each entry has the following format:
+Linked presentations etc. are defined in `resources.yaml`. Each entry has the following format:
 
 ``` yaml
   - date: {DDMMMYYYY}
