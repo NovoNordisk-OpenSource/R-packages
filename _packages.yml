@@ -24,3 +24,8 @@ packages:
   - name: novonordisk-opensource/connector
     categories:
       - trial conduct
+      - connector
+  - name: novonordisk-opensource/connector.databricks
+    categories:
+      - trial conduct
+      - connector
