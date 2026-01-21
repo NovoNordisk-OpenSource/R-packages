@@ -20,3 +20,38 @@ presentations:
     presenters: 
       - name: Lovemore Gakava
       - name: Cervan Girard
+        link: https://github.com/Cervangirard
+
+  - date: 30oct2024
+    presentation:
+      name: "{whirl} – An Open-Source R Package for Program Logs"
+      link: "https://youtu.be/H-SfnDCaokI"
+    event: 
+      name: R/Pharma 2024
+    presenters: 
+      - name: Lovemore Gakava
+      - name: Cervan Girard
+        link: https://github.com/Cervangirard
+
+  - date: 17apr2025
+    presentation:
+      name: "Streamlining Data Access in Clinical Research: Introducing the connector R Package"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2025/SDE/EU/Utrecht/PRE_Utrecht04.pdf"
+    event: 
+      name: PHUSE SDE Utrecht
+      link: https://www.phuse-events.org/attend/frontend/reg/thome.csp?pageID=49071&eventID=76&traceRedir=4
+    presenters: 
+      - name: Aksel Thomsen
+        link: https://github.com/akselthomsen
+      - name: Cervan Girard
+        link: https://github.com/Cervangirard
+
+  - date: 18sep2024
+    presentation:
+      name: "Building Web Applications: What If {shiny} Didn’t Exist...?"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2024/SDE/EU/Basel/PRE_Basel08.pdf"
+    event: 
+      name: PHUSE SDE Basel
+    presenters: 
+      - name: Cervan Girard
+        link: https://github.com/Cervangirard
