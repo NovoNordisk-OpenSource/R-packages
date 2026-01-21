@@ -33,6 +33,6 @@ packages:
     categories:
       - trial conduct
       - connector
-  - name: https://github.com/NovoNordisk-OpenSource/S7schema
+  - name: novonordisk-opensource/s7schema
     categories:
       - utility
