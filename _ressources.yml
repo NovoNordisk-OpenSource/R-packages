@@ -48,10 +48,76 @@ presentations:
 
   - date: 18sep2024
     presentation:
-      name: "Building Web Applications: What If {shiny} Didn’t Exist...?"
+      name: "Building Web Applications: What If {shiny} Didn't Exist...?"
       link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2024/SDE/EU/Basel/PRE_Basel08.pdf"
-    event: 
+    event:
       name: PHUSE SDE Basel
-    presenters: 
+    presenters:
       - name: Cervan Girard
         link: https://github.com/Cervangirard
+
+  - date: 18nov2025
+    presentation:
+      name: "More Science, Less Bookkeeping: Our Path to Hyper-Efficient ADaM Program Generation"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2025/Connect/EU/Hamburg/PRE_SM04.pdf"
+    event:
+      name: PHUSE EU Connect Hamburg
+    presenters:
+      - name: Matthew Phelps
+        link: https://github.com/matthew-phelps
+      - name: Nicolai Skov Johnsen
+
+  - date: 23sep2024
+    presentation:
+      name: "Rewriting Our Global Validation Process for SAS Programs"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2024/SDE/EU/Brussels/PRE_Brussels06.pdf"
+    event:
+      name: PHUSE SDE Brussels
+    presenters:
+      - name: Matthew Phelps
+        link: https://github.com/matthew-phelps
+      - name: Nicolai Skov Johnsen
+
+  - date: 10nov2024
+    presentation:
+      name: "{r}amnog: Towards a Common, Open-Source Solution for Programming AMNOG-Style EU-HTA Analyses"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2024/Connect/EU/Strasbourg/PRE_OS10.pdf"
+    event:
+      name: PHUSE EU Connect Strasbourg
+    presenters:
+      - name: Matthew Phelps
+        link: https://github.com/matthew-phelps
+      - name: Christian Olsen
+
+  - date: 10oct2023
+    presentation:
+      name: "Generalisable Analysis Pipelines for Handling Large HTA Submissions"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2023/SDE/EU/Copenhagen/POS_Copenhagen02.pdf"
+    event:
+      name: PHUSE SDE Copenhagen
+    presenters:
+      - name: Matthew Phelps
+        link: https://github.com/matthew-phelps
+      - name: Nicolai Skov Johnsen
+
+  - date: 13nov2022
+    presentation:
+      name: "Automation in Biostatistics at Novo Nordisk"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2022/Connect/EU/Belfast/PRE_LI05.pdf"
+    event:
+      name: PHUSE EU Connect Belfast
+    presenters:
+      - name: Matthew Phelps
+        link: https://github.com/matthew-phelps
+
+  - date: 25feb2024
+    presentation:
+      name: "HoW - Your First Submission in R"
+      link: "https://phuse.s3.eu-central-1.amazonaws.com/Archive/2024/Connect/US/Bethesda/PRE_HoW01.pdf"
+    event:
+      name: PHUSE US Connect Bethesda
+    presenters:
+      - name: Kristian Trøjelsgaard
+        link: https://github.com/Troejelsgaard
+      - name: Steffen Falgreen Larsen
+        link: https://github.com/falgreen
