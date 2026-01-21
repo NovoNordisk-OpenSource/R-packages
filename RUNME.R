@@ -33,6 +33,6 @@ for (pkg in packages) {
 
 # Create hex sticker wall on the front page ----
 
-packages |> 
-  hexgrid() |> 
+packages |>
+  hexgrid() |>
   writeLines("www/hex.html")
