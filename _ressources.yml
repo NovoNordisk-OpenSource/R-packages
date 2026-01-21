@@ -22,17 +22,6 @@ presentations:
       - name: Cervan Girard
         link: https://github.com/Cervangirard
 
-  - date: 30oct2024
-    presentation:
-      name: "{whirl} – An Open-Source R Package for Program Logs"
-      link: "https://youtu.be/H-SfnDCaokI"
-    event: 
-      name: R/Pharma 2024
-    presenters: 
-      - name: Lovemore Gakava
-      - name: Cervan Girard
-        link: https://github.com/Cervangirard
-
   - date: 17apr2025
     presentation:
       name: "Streamlining Data Access in Clinical Research: Introducing the connector R Package"
