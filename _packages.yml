@@ -33,3 +33,10 @@ packages:
     categories:
       - trial conduct
       - connector
+  - name: novonordisk-opensource/s7schema
+    categories:
+      - utility
+  - name: novonordisk-opensource/mighty.component
+    categories:
+      - mighty
+      - ADaM

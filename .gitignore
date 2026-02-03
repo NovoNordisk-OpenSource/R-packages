@@ -38,3 +38,5 @@ rsconnect/
 /_site/
 # macos stuff
 .DS_Store
+
+**/*.quarto_ipynb

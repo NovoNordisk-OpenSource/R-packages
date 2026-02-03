@@ -54,7 +54,7 @@ ressources <- split(ressources, ressources$type) |>
 for (i in seq_along(ressources)) {
   cat("## ", stringr::str_to_title(names(ressources)[[i]]), "\n")
 
-  for (j in seq_along(ressources[[i]])) {
+  for (j in rev(seq_along(ressources[[i]]))) {
     cat("### ", stringr::str_to_title(names(ressources[[i]])[[j]]), "\n")
 
     glue::glue_data(
@@ -62,6 +62,8 @@ for (i in seq_along(ressources)) {
       "* **{date}** {presentation}, {event}, by {presenters}"
     ) |>
       cat(sep = "\n")
+
+    cat("\n")
   }
 }
 ```

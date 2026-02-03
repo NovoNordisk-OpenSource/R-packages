@@ -1,9 +1,0 @@
----
-title: Launch of homepage
-date: 2024-11-07
-author: Aksel Thomsen
----
-
-![](logo_nn.png){width=400}
-
-We are happy to announce the launch of our homepage.

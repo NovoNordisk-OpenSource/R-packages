@@ -17,7 +17,6 @@ website:
     left:
       - packages/index.qmd
       - ressources/index.qmd
-      - news/index.qmd
     right: 
       - icon: github
         href: https://github.com/NovoNordisk-OpenSource
