@@ -40,3 +40,7 @@ packages:
     categories:
       - mighty
       - ADaM
+  - name: novonordisk-opensource/mighty.metadata
+    categories:
+      - mighty
+      - ADaM
